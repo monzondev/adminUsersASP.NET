@@ -1,5 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using AdminSystem;
+
 
 namespace AdminSystem
 {
@@ -8,6 +10,8 @@ namespace AdminSystem
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new Controllers.Filtros.Verify());
+
         }
     }
 }
